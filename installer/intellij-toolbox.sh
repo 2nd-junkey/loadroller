@@ -6,14 +6,8 @@ then
 fi
 
 tempdir=$(mktemp -d)
-# trap "rm -rf $tempdir" EXIT
-while [ ! -d $tempdir ]
-do
-	sleep 1
-	echo $tempdir
-done
 cd $tempdir
 wget https://download.jetbrains.com/toolbox/$toolbox
-tar xvf $toolbox
-cd $(dirname $toolbox)
+tar --strip-components=1 -xvf $toolbox
+mv jetbrains-toolbox /usr/bin/
 
