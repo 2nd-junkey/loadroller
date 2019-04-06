@@ -1,4 +1,4 @@
-type curl >/dev/null 2&>1
+type curl >/dev/null 2>&1
 if [ "$?" -ne "0" ]
 then
 	sudo apt install -y curl
