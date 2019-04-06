@@ -9,5 +9,5 @@ tempdir=$(mktemp -d)
 cd $tempdir
 wget https://download.jetbrains.com/toolbox/$toolbox
 tar --strip-components=1 -xvf $toolbox
-mv jetbrains-toolbox /usr/bin/
+sudo mv jetbrains-toolbox /usr/bin/
 
